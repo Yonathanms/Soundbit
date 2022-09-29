@@ -1,6 +1,6 @@
 package views;
 
-import com.mycompany.reproductor.sd;
+import com.mycompany.reproductor.Reproductor;
 
 public class Inicio extends javax.swing.JFrame {
     /**
@@ -75,12 +75,12 @@ public class Inicio extends javax.swing.JFrame {
 
     private void registraBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_registraBtnMouseClicked
         this.setVisible(false);
-        sd.registro.setVisible(true);
+        Reproductor.registro.setVisible(true);
     }//GEN-LAST:event_registraBtnMouseClicked
 
     private void inicioBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_inicioBtnMouseClicked
         this.setVisible(false);
-        sd.inicioSesion.setVisible(true);
+        Reproductor.inicioSesion.setVisible(true);
     }//GEN-LAST:event_inicioBtnMouseClicked
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

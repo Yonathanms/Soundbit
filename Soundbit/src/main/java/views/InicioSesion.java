@@ -1,6 +1,6 @@
 package views;
 
-import com.mycompany.reproductor.sd;
+import com.mycompany.reproductor.Reproductor;
 import com.mycompany.reproductor.models.Usuario;
 
 public class InicioSesion extends javax.swing.JFrame {
@@ -85,7 +85,7 @@ public class InicioSesion extends javax.swing.JFrame {
 
     private void AtrasBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AtrasBtnMouseClicked
         this.setVisible(false);
-        sd.inicio.setVisible(true);
+        Reproductor.inicio.setVisible(true);
     }//GEN-LAST:event_AtrasBtnMouseClicked
 
     private void iniciarSesionBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iniciarSesionBtnActionPerformed
@@ -95,13 +95,13 @@ public class InicioSesion extends javax.swing.JFrame {
          */
         String mail = correo.getText();
         String contra = pass.getText();
-        Usuario usuario = sd.usuario.primero;
+        Usuario usuario = Reproductor.usuario.primero;
         while(usuario != null){
             if(usuario.getCorreoElectronico().equals(mail) && usuario.getContrasena().equals(contra)){
-                sd.activo = usuario;
-                sd.cargarBibliotecas();
-                sd.menuBiblioteca = new BibliotecaMenu();
-                sd.menuBiblioteca.setVisible(true);
+                Reproductor.activo = usuario;
+                Reproductor.cargarBibliotecas();
+                Reproductor.menuBiblioteca = new BibliotecaMenu();
+                Reproductor.menuBiblioteca.setVisible(true);
                 this.setVisible(false);
                 break;
             }
