@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-prueba#1
-=======
-prueba#1
->>>>>>> main
+a,a@a.com,San José,as
+p,p@p.com,Limón,ps
+ynms,ynms@s,San José,si
+sss,s@s.com,Alajuela,s

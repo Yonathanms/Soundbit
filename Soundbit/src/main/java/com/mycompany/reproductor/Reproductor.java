@@ -41,7 +41,7 @@ public class Reproductor {
          * 
          * @see Usuario
          */
-        File file = new File("C:\\Users\\Yonathan\\Desktop\\Proyecto I Datos\\reproductor-main\\src\\main\\java\\data\\usuarios.txt");
+        File file = new File("C:\\Users\\yonathanms146\\Desktop\\proyecto datos\\Soundbit\\Soundbit\\src\\main\\java\\data\\usuarios.txt");
  
         try {
             try (BufferedWriter bw = new BufferedWriter(new FileWriter(file, true))) {
@@ -62,7 +62,7 @@ public class Reproductor {
          */
         Reproductor.usuario = null;
         
-        File file = new File("C:\\Users\\Yonathan\\Desktop\\Proyecto I Datos\\reproductor-main\\src\\main\\java\\data\\usuarios.txt");
+        File file = new File("C:\\Users\\yonathanms146\\Desktop\\proyecto datos\\Soundbit\\Soundbit\\src\\main\\java\\data\\usuarios.txt");
  
         try {
             try (BufferedReader br = new BufferedReader(new FileReader(file))) {
@@ -85,7 +85,7 @@ public class Reproductor {
          */
         Reproductor.bibliotecas = null;
         
-        File file = new File("C:\\Users\\Yonathan\\Desktop\\Proyecto I Datos\\reproductor-main\\src\\main\\java\\data\\bibliotecas.txt");
+        File file = new File("C:\\Users\\yonathanms146\\Desktop\\proyecto datos\\Soundbit\\Soundbit\\src\\main\\java\\data\\bibliotecas.txt");
  
         try {
             try (BufferedReader br = new BufferedReader(new FileReader(file))) {
@@ -113,7 +113,7 @@ public class Reproductor {
          * 
          * @see Biblioteca
          */
-        File file = new File("C:\\Users\\Yonathan\\Desktop\\Proyecto I Datos\\reproductor-main\\src\\main\\java\\data\\bibliotecas.txt");
+        File file = new File("C:\\Users\\yonathanms146\\Desktop\\proyecto datos\\Soundbit\\Soundbit\\src\\main\\java\\data\\bibliotecas.txt");
  
         try {
             try (BufferedWriter bw = new BufferedWriter(new FileWriter(file, true))) {
@@ -130,7 +130,7 @@ public class Reproductor {
         /**
          * guarda las bilbiotecas en la lista simple en el archivo de texto que maneja su registro
          */
-        File file = new File("C:\\Users\\Yonathan\\Desktop\\Proyecto I Datos\\reproductor-main\\src\\main\\java\\data\\bibliotecas.txt");
+        File file = new File("C:\\Users\\yonathanms146\\Desktop\\proyecto datos\\Soundbit\\Soundbit\\src\\main\\java\\data\\bibliotecas.txt");
  
         try {
             try (BufferedWriter bw = new BufferedWriter(new FileWriter(file, false))) {

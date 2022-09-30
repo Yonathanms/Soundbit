@@ -45,7 +45,7 @@ public class Favoritas extends javax.swing.JFrame {
          */
         this.playlist.primerCancion = null;
         ObjectMapper mapper = new XmlMapper();
-        InputStream inputStream = new FileInputStream(new File("C:\\Users\\Yonathan\\Desktop\\Proyecto I Datos\\reproductor-main\\src\\main\\java\\data\\canciones.xml"));
+        InputStream inputStream = new FileInputStream(new File("C:\\Users\\yonathanms146\\Desktop\\proyecto datos\\Soundbit\\Soundbit\\src\\main\\java\\data\\canciones.xml"));
         TypeReference<ArrayList<Cancion>> typeReference = new TypeReference<ArrayList<Cancion>>() {};
         ArrayList<Cancion> canciones = mapper.readValue(inputStream, typeReference);
         for(Cancion song : canciones){

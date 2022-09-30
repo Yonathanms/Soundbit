@@ -62,9 +62,11 @@ public class MusicReproducer extends javax.swing.JFrame{
         initComponents();
         jLabel2.setText(playlist.getNombre());
         cargarCanciones();
-        actualSong = this.playlist.primerCancion;
-        actualSongFile = new FileInputStream(actualSong.getPath());
-        player = new MP3Player(actualSongFile);
+        if(this.playlist.primerCancion != null){
+            actualSong = this.playlist.primerCancion;
+            actualSongFile = new FileInputStream(actualSong.getPath());
+            player = new MP3Player(actualSongFile);
+        }
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -211,37 +213,45 @@ public class MusicReproducer extends javax.swing.JFrame{
          * a la biblioteca actual
          * tambien despliega las canciones en la interfaz en forma de botones
          */
-        this.playlist.primerCancion = null;
-        ObjectMapper mapper = new XmlMapper();
-        InputStream inputStream = new FileInputStream(new File("C:\\Users\\Yonathan\\Desktop\\Proyecto I Datos\\reproductor-main\\src\\main\\java\\data\\canciones.xml"));
-        TypeReference<ArrayList<Cancion>> typeReference = new TypeReference<ArrayList<Cancion>>() {};
-        ArrayList<Cancion> canciones = mapper.readValue(inputStream, typeReference);
-        Playlist play;
-        for(Cancion song : canciones){
-            if(song.getNombreBiblioteca().equals(this.playlist.getNombre())){
-                play = new Playlist();
-                play.setNombreBiblioteca(this.playlist.getNombre());
-                play.setTitulo(song.getTitulo());
-                play.setArtista(song.getArtista());
-                play.setGenero(song.getGenero());
-                play.setAlbum(song.getAlbum());
-                play.setAnio(song.getAnio());
-                play.setFavorita(song.isFavorita());
-                play.setPath(song.getPath());
-                this.playlist.agregarCancion(play);
-                if(first){
-                    JButton boton = new JButton(song.getTitulo());
-                    boton.addActionListener(e -> songButtonPressed(boton, this.playlist));
-                    panel.add(boton);
-                    panel.validate();
-                    panel.repaint();
-                    botones.add(boton);
+        try{
+            this.playlist.primerCancion = null;
+            ObjectMapper mapper = new XmlMapper();
+            InputStream inputStream = new FileInputStream(new File("C:\\Users\\yonathanms146\\Desktop\\proyecto datos\\Soundbit\\Soundbit\\src\\main\\java\\data\\canciones.xml"));
+            TypeReference<ArrayList<Cancion>> typeReference = new TypeReference<ArrayList<Cancion>>() {};
+            ArrayList<Cancion> canciones = mapper.readValue(inputStream, typeReference);
+            Playlist play;
+            for(Cancion song : canciones){
+                if(song.getNombreBiblioteca().equals(this.playlist.getNombre())){
+                    play = new Playlist();
+                    play.setNombreBiblioteca(this.playlist.getNombre());
+                    play.setTitulo(song.getTitulo());
+                    play.setArtista(song.getArtista());
+                    play.setGenero(song.getGenero());
+                    play.setAlbum(song.getAlbum());
+                    play.setAnio(song.getAnio());
+                    play.setFavorita(song.isFavorita());
+                    play.setPath(song.getPath());
+                    this.playlist.agregarCancion(play);
+                    if(first){
+                        JButton boton = new JButton(song.getTitulo());
+                        boton.addActionListener(e -> songButtonPressed(boton, this.playlist));
+                        panel.add(boton);
+                        panel.validate();
+                        panel.repaint();
+                        botones.add(boton);
+                    }
                 }
             }
+            inputStream.close();
+            actualSong = this.playlist.primerCancion;
+            actualSongFile = new FileInputStream(actualSong.getPath());
+            player = new MP3Player(actualSongFile);
+            first= false;
         }
-        inputStream.close();
-        first = false;
-    }
+        catch(Exception e){
+            e.printStackTrace();
+            }
+        }
     
     private void agregarCancionBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_agregarCancionBtnMouseClicked
         /**
@@ -384,7 +394,7 @@ public class MusicReproducer extends javax.swing.JFrame{
          * 
          * @see Cancion
          */
-        File xmlFile = new File("C:\\Users\\Yonathan\\Desktop\\Proyecto I Datos\\reproductor-main\\src\\main\\java\\data\\canciones.xml");
+        File xmlFile = new File("C:\\Users\\yonathanms146\\Desktop\\proyecto datos\\Soundbit\\Soundbit\\src\\main\\java\\data\\canciones.xml");
         DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
         Document document = documentBuilder.parse(xmlFile);

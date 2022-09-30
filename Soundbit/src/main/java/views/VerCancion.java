@@ -243,7 +243,7 @@ public class VerCancion extends javax.swing.JFrame {
         /**
          * elimina una cancion del xml 
          */
-        File xmlFile = new File("C:\\Users\\Yonathan\\Desktop\\Proyecto I Datos\\reproductor-main\\src\\main\\java\\data\\canciones.xml");
+        File xmlFile = new File("C:\\Users\\yonathanms146\\Desktop\\proyecto datos\\Soundbit\\Soundbit\\src\\main\\java\\data\\canciones.xml");
         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
         Document document = dbf.newDocumentBuilder().parse(xmlFile);
 
@@ -280,7 +280,7 @@ public class VerCancion extends javax.swing.JFrame {
             Logger.getLogger(VerCancion.class.getName()).log(Level.SEVERE, null, ex);
         }
         try{
-            File xmlFile = new File("C:\\Users\\Yonathan\\Desktop\\Proyecto I Datos\\reproductor-main\\src\\main\\java\\data\\canciones.xml");
+            File xmlFile = new File("C:\\Users\\yonathanms146\\Desktop\\proyecto datos\\Soundbit\\Soundbit\\src\\main\\java\\data\\canciones.xml");
             DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
             Document document = documentBuilder.parse(xmlFile);
@@ -341,7 +341,7 @@ public class VerCancion extends javax.swing.JFrame {
         /**
          * agrega una cancion a favoritas y guarda los cambios en el xml
          */
-        File xmlFile = new File("C:\\Users\\Yonathan\\Desktop\\Proyecto I Datos\\reproductor-main\\src\\main\\java\\data\\canciones.xml");
+        File xmlFile = new File("C:\\Users\\yonathanms146\\Desktop\\proyecto datos\\Soundbit\\Soundbit\\src\\main\\java\\data\\canciones.xml");
         try{
             DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
@@ -374,7 +374,7 @@ public class VerCancion extends javax.swing.JFrame {
         /**
          * elimina una cancion de favoritos y guarda los cambios en el xml
          */
-        File xmlFile = new File("C:\\Users\\Yonathan\\Desktop\\Proyecto I Datos\\reproductor-main\\src\\main\\java\\data\\canciones.xml");
+        File xmlFile = new File("C:\\Users\\yonathanms146\\Desktop\\proyecto datos\\Soundbit\\Soundbit\\src\\main\\java\\data\\canciones.xml");
         try{
             DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
@@ -407,7 +407,7 @@ public class VerCancion extends javax.swing.JFrame {
         /**
          * modifica el si una cancion es favorita o no en el xml
          */
-        File xmlFile = new File("C:\\Users\\Yonathan\\Desktop\\Proyecto I Datos\\reproductor-main\\src\\main\\java\\data\\canciones.xml");
+        File xmlFile = new File("C:\\Users\\yonathanms146\\Desktop\\proyecto datos\\Soundbit\\Soundbit\\src\\main\\java\\data\\canciones.xml");
         DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
         Document document = documentBuilder.parse(xmlFile);
