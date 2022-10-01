@@ -42,6 +42,11 @@
             <version>1.4</version>
             <type>jar</type>
         </dependency>
+        <dependency>
+            <groupId>es.comu_arduino.libreria</groupId>
+            <artifactId>CA_arduino_rxtx</artifactId>
+            <version>rxtx.Zulu.jar</version>
+        </dependency>
     </dependencies>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
